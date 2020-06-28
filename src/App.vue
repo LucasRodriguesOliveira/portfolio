@@ -1,28 +1,52 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HeaderComponent></HeaderComponent>
+    <ContentComponent></ContentComponent>
+    <FooterComponent></FooterComponent>
+    <CurriculumComponent></CurriculumComponent>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComponent from './components/header'
+import ContentComponent from './components/content'
+import FooterComponent from './components/footer'
+import CurriculumComponent from './components/curriculum'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HeaderComponent,
+    ContentComponent,
+    FooterComponent,
+    CurriculumComponent
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
+
+ html {
+   font-size: 16px;
+ }
+
+ a:link, a:hover, a:active, a:visited {
+   text-decoration: none;
+ }
+
+ #app {
+   min-height: 100vw;
+ }
+
+ @media only screen and (min-width: 1000px) {
+   #app {
+     min-height: 0;
+   }
+ }
 </style>
